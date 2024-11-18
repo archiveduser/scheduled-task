@@ -23,6 +23,7 @@ repolist = [
     },
 ]
 
+repolist = sorted(repolist, key=lambda x: x['name'].lower())
 
 REVERSE_PROXY_URL = os.getenv("REVERSE_PROXY_URL", "")
 
