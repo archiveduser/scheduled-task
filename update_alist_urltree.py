@@ -1,5 +1,6 @@
 import json
 import requests
+import os
 
 ALIST_URL = os.getenv("ALIST_URL", "")
 ALIST_USERNAME = os.getenv("ALIST_USERNAME", "")
