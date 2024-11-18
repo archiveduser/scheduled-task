@@ -29,7 +29,7 @@ response = requests.post(
         "mount_path": ALIST_DRIVER_PATH,
         "driver": "UrlTree",
         "status": "work",
-        "addition": json.dumps({"url_structure": alist_tree_text, "head_size": False}),
+        "addition": json.dumps({"url_structure": content, "head_size": False}),
         "enable_sign": False,
         "order_by": "",
         "order_direction": "",
