@@ -9,22 +9,17 @@ repolist = [
     {
         "name": "ClashMetaForAndroid",
         "url": "https://github.com/MetaCubeX/ClashMetaForAndroid",
-        "filter": [".apk", ".tar.gz"],
+        "filter": [".apk"],
     },
     {
         "name": "clash-verge-rev",
         "url": "https://github.com/clash-verge-rev/clash-verge-rev",
-        "filter": [".deb", ".tar.gz"],
+        "filter": [".exe"],
     },
 ]
 
 
 REVERSE_PROXY_URL = os.getenv("REVERSE_PROXY_URL", "")
-ALIST_URL = os.getenv("ALIST_URL", "")
-ALIST_USERNAME = os.getenv("ALIST_USERNAME", "")
-ALIST_PASSWORD = os.getenv("ALIST_PASSWORD", "")
-ALIST_DRIVER_PATH = os.getenv("ALIST_DRIVER_PATH", "")
-ALIST_DRIVER_ID = os.getenv("ALIST_DRIVER_ID", "")
 
 
 def get_github_releases(repo_url, limit=5, filter_ext=None):
@@ -113,30 +108,5 @@ alist_tree_text = generate_alist_tree_text(alist_tree)
 # 打印生成的文本
 print(alist_tree_text)
 
-response = requests.post(
-    f"{ALIST_URL}/api/auth/login",
-    json={"username": f"{ALIST_USERNAME}", "password": f"{ALIST_PASSWORD}"},
-)
-
-response.raise_for_status()
-token = response.json()["data"]["token"]
-
-
-response = requests.post(
-    f"{ALIST_URL}/api/admin/storage/update",
-    headers={"Authorization": token, "Content-Type": "application/json"},
-    json={
-        "id": int(ALIST_DRIVER_ID),
-        "mount_path": ALIST_DRIVER_PATH,
-        "driver": "UrlTree",
-        "status": "work",
-        "addition": json.dumps({"url_structure": alist_tree_text, "head_size": False}),
-        "enable_sign": False,
-        "order_by": "",
-        "order_direction": "",
-        "extract_folder": "",
-        "web_proxy": False,
-    },
-)
-
-print(response.json())
+with open("/tmp/urltree", "a", encoding="utf8") as f:
+    f.write(f"{alist_tree_text}\n")

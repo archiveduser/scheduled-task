@@ -1,4 +1,4 @@
-name: Collect GitHub Release URLs
+name: Collect Release URLs
 
 on:
   schedule:
@@ -29,10 +29,15 @@ jobs:
       - name: Run collect_github_release_urls.py
         env:
           REVERSE_PROXY_URL: ${{ secrets.REVERSE_PROXY_URL }}
+        run: |
+          python collect_github_release_urls.py
+
+      - name: Run update_alist_urltree.py
+        env:
           ALIST_URL: ${{ secrets.ALIST_URL }}
           ALIST_USERNAME: ${{ secrets.ALIST_USERNAME }}
           ALIST_PASSWORD: ${{ secrets.ALIST_PASSWORD }}
           ALIST_DRIVER_PATH: ${{ secrets.ALIST_DRIVER_PATH }}
           ALIST_DRIVER_ID: ${{ secrets.ALIST_DRIVER_ID }}
         run: |
-          python collect_github_release_urls.py
+          python update_alist_urltree.py
