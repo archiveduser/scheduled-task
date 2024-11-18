@@ -21,6 +21,11 @@ repolist = [
         "url": "https://github.com/clash-verge-rev/clash-verge-rev",
         "filter": [".exe", ".deb", ".dmg", "portable.zip"],
     },
+    {
+        "name": "qbittorrent-nox-static",
+        "url": "https://github.com/userdocs/qbittorrent-nox-static",
+        "filter": ["nox"],
+    },
 ]
 
 repolist = sorted(repolist, key=lambda x: x['name'].lower())
