@@ -7,6 +7,11 @@ import json
 # 定义项目列表
 repolist = [
     {
+        "name": "mihomo",
+        "url": "https://github.com/MetaCubeX/mihomo",
+        "filter": [".gz"],
+    },
+    {
         "name": "ClashMetaForAndroid",
         "url": "https://github.com/MetaCubeX/ClashMetaForAndroid",
         "filter": [".apk"],
@@ -14,7 +19,7 @@ repolist = [
     {
         "name": "clash-verge-rev",
         "url": "https://github.com/clash-verge-rev/clash-verge-rev",
-        "filter": [".exe"],
+        "filter": [".exe", ".deb", ".dmg", "portable.zip"],
     },
 ]
 
