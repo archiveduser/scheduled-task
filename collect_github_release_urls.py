@@ -26,6 +26,21 @@ repolist = [
         "url": "https://github.com/userdocs/qbittorrent-nox-static",
         "filter": ["nox"],
     },
+    {
+        "name": "v2rayng",
+        "url": "https://github.com/2dust/v2rayng",
+        "filter": [".apk"],
+    },
+    {
+        "name": "termux-app",
+        "url": "https://github.com/termux/termux-app",
+        "filter": [".apk"],
+    },
+    {
+        "name": "winlator",
+        "url": "https://github.com/brunodev85/winlator",
+        "filter": [".apk"],
+    },
 ]
 
 repolist = sorted(repolist, key=lambda x: x['name'].lower())
