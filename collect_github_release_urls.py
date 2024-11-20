@@ -41,6 +41,21 @@ repolist = [
         "url": "https://github.com/brunodev85/winlator",
         "filter": [".apk"],
     },
+    {
+        "name": "MaterialFiles",
+        "url": "https://github.com/zhanghai/MaterialFiles",
+        "filter": [".apk"],
+    },
+    {
+        "name": "Thanox",
+        "url": "https://github.com/Tornaco/Thanox",
+        "filter": [".apk"],
+    },
+    {
+        "name": "moonlight-android",
+        "url": "https://github.com/moonlight-stream/moonlight-android",
+        "filter": [".apk"],
+    },
 ]
 
 repolist = sorted(repolist, key=lambda x: x['name'].lower())
