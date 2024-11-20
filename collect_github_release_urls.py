@@ -56,6 +56,11 @@ repolist = [
         "url": "https://github.com/moonlight-stream/moonlight-android",
         "filter": [".apk"],
     },
+    {
+        "name": "alist",
+        "url": "https://github.com/AlistGo/alist",
+        "filter": [".gz", ".zip"],
+    },
 ]
 
 repolist = sorted(repolist, key=lambda x: x['name'].lower())
