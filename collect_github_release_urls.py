@@ -61,6 +61,11 @@ repolist = [
         "url": "https://github.com/AlistGo/alist",
         "filter": [".gz", ".zip"],
     },
+    {
+        "name": "rclone",
+        "url": "https://github.com/rclone/rclone",
+        "filter": [".gz", ".zip"],
+    },
 ]
 
 repolist = sorted(repolist, key=lambda x: x['name'].lower())
