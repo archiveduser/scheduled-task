@@ -67,7 +67,7 @@ repolist = [
         "filter": [".gz", ".zip"],
     },
     {
-        "name": "magisk-files",
+        "name": "magisk-delta",
         "url": "https://github.com/HuskyDG/magisk-files",
         "filter": [".apk"],
     },
@@ -80,6 +80,11 @@ repolist = [
         "name": "gkd",
         "url": "https://github.com/gkd-kit/gkd",
         "filter": [".apk"],
+    },
+    {
+        "name": "LSPosed",
+        "url": "https://github.com/LSPosed/LSPosed",
+        "filter": [".zip"],
     },
 ]
 
@@ -107,8 +112,8 @@ def get_github_releases(repo_url, limit=5, filter_ext=None):
         count = 0
         for release in releases:
             # 跳过 Pre-release 版本
-            if release.get("prerelease", False):
-                continue
+            #if release.get("prerelease", False):
+            #    continue
 
             release_info = {
                 "tag_name": release.get("tag_name", "Unnamed Tag"),
