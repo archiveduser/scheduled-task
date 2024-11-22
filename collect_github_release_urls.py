@@ -66,6 +66,21 @@ repolist = [
         "url": "https://github.com/rclone/rclone",
         "filter": [".gz", ".zip"],
     },
+    {
+        "name": "magisk-files",
+        "url": "https://github.com/HuskyDG/magisk-files",
+        "filter": [".apk"],
+    },
+    {
+        "name": "magisk",
+        "url": "https://github.com/topjohnwu/magisk",
+        "filter": [".apk"],
+    },
+    {
+        "name": "gkd",
+        "url": "https://github.com/gkd-kit/gkd",
+        "filter": [".apk"],
+    },
 ]
 
 repolist = sorted(repolist, key=lambda x: x['name'].lower())
