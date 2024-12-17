@@ -86,6 +86,16 @@ repolist = [
         "url": "https://github.com/LSPosed/LSPosed",
         "filter": [".zip"],
     },
+    {
+        "name": "Sunshine",
+        "url": "https://github.com/LizardByte/Sunshine",
+        "filter": [".zip", ".exe"],
+    },
+    {
+        "name": "moonlight-qt",
+        "url": "https://github.com/moonlight-stream/moonlight-qt",
+        "filter": [".zip", ".exe"],
+    },
 ]
 
 repolist = sorted(repolist, key=lambda x: x['name'].lower())
