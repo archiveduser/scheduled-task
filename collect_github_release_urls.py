@@ -96,6 +96,11 @@ repolist = [
         "url": "https://github.com/moonlight-stream/moonlight-qt",
         "filter": [".zip", ".exe"],
     },
+    {
+        "name": "CMWTAT_Digital_Edition",
+        "url": "https://github.com/TGSAN/CMWTAT_Digital_Edition",
+        "filter": [".zip", ".exe"],
+    },
 ]
 
 repolist = sorted(repolist, key=lambda x: x['name'].lower())
